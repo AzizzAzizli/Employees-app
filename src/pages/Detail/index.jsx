@@ -22,7 +22,7 @@ export const Detail = () => {
 
       <div className="d-flex gap-5 my-5">
         {loading ? (
-          <h1>Loading...</h1>
+          <h1 className="fs-1 fw-bold  text-center text-success mt-5">Loading...</h1>
         ) : (
           <div className="d-flex flex-column flex-lg-row  align-items-center gap-5 text-center text-lg-start">
             <div className="w-25 container">
