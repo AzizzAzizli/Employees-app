@@ -4,7 +4,7 @@ import { Nav } from "../../shared/components/Nav";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { useAxios } from "../../shared/hooks/useAxios";
-import {  getUsersID, updateUser } from "../../shared/services/user";
+import { getUsersID, updateUser } from "../../shared/services/user";
 import { ROUTE } from "../../shared/constants/Router";
 
 let userObj = {
@@ -14,7 +14,7 @@ let userObj = {
 };
 
 export const DetailSetting = () => {
-  let navigate=useNavigate()
+  let navigate = useNavigate();
   const [user, setUser] = useState(userObj);
   let { id } = useParams();
   // console.log(id);
@@ -42,12 +42,12 @@ export const DetailSetting = () => {
   async function updateData() {
     let res = await updateUser(ID, user);
     console.log(res);
-if(res.status===200){
-  alert("Changes successfully saved !")
-navigate(ROUTE.Home)
-}
-
-  
+    if (res.status === 200) {
+      alert("Changes successfully saved !");
+      navigate(ROUTE.Home);
+    } else {
+      alert("Problem occurred");
+    }
   }
   return (
     <div>
@@ -59,7 +59,7 @@ navigate(ROUTE.Home)
           Loading...
         </h1>
       ) : (
-        <div className="d-flex container justify-content-between align-items-center mt-5">
+        <div className="d-flex container justify-content-between align-items-center mt-5 flex-column flex-lg-row  gap-3">
           <div className="w-25">
             <img
               className=" object-fit-cover w-100"
