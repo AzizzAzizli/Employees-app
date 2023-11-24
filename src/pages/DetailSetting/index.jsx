@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { useAxios } from "../../shared/hooks/useAxios";
 import { getUsersID, updateUser } from "../../shared/services/user";
-import { ROUTE } from "../../shared/constants/Router";
+import { ROUTE } from "../../shared/constants/router";
 
 let userObj = {
   username: "",

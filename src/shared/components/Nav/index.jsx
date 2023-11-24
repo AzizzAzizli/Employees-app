@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router";
 import "./nav.css";
-import { ROUTE } from "../../constants/Router";
+import { ROUTE } from "../../constants/router";
 
 export const Nav = () => {
   let navigator = useNavigate();

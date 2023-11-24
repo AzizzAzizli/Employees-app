@@ -3,7 +3,7 @@ import { HomePage } from "./pages/Home";
 import { Detail } from "./pages/Detail";
 import { DetailSetting } from "./pages/DetailSetting";
 import { ErrorPage } from "./pages/Error";
-import { ROUTE } from "./shared/constants/router.js";
+import { ROUTE } from "./shared/constants/router";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route path={ROUTE.Home} element={<HomePage />} />
         <Route path={ROUTE.Detail} element={<Detail />} />
         <Route path={ROUTE.Detail_Setting} element={<DetailSetting />} />
-        <Route path="*" element ={<ErrorPage/>}/>
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );
