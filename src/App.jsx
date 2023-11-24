@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/Home";
-import { ROUTE } from "./shared/constants/router";
 import { Detail } from "./pages/Detail";
 import { DetailSetting } from "./pages/DetailSetting";
 import { ErrorPage } from "./pages/Error";
+import { ROUTE } from "./shared/constants/router.js";
 
 function App() {
   return (
